@@ -1,10 +1,4 @@
-import os
-import openai
-
-api_key = os.getenv("OPENAI_KEY")
-openai.api_key = api_key
-
-# Workout routine completion parameters
+# Set system/model parameters
 parameters = {
     "model": "gpt-3.5-turbo",
     "temperature": 0.6,
@@ -21,5 +15,6 @@ job = '''
     '''
 
 concision = '''
-    Be concise and provide the routine and each workout regime in table format.
+    Be concise and provide the routine and each workout regime
+    in parseable table format.
     '''
